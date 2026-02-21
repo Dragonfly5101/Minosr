@@ -1,0 +1,113 @@
+local StarterCharacter = game:GetService("StarterPlayer").StarterCharacter
+
+pcall(function()
+
+            do
+                local Event 
+            if game.Players.LocalPlayer.Character:FindFirstChild("ForceField") then
+                game.StarterGui:SetCore("SendNotification", {
+            Title = "God Mode Worked";
+            Text = "Please reset or switch character and retry if you want god mode again";
+            Duration = 3;
+        })
+            else
+            if true then
+                local Character = game:GetService("Players").LocalPlayer.Character
+if Character:GetAttribute("GotDamage") or Character:GetAttribute("DidDamage") then
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Combat Logged";
+        Text = "Please reset or switch character and retry";
+        Duration = 3;
+    })
+else
+local vol = UserSettings():GetService("UserGameSettings").MasterVolume
+local Moveset = game.Players.LocalPlayer:GetAttribute("Character")
+Event =  game:GetService("Players").LocalPlayer.Character.Communicate
+
+
+if Moveset ~= "Esper" then
+local args = {
+        {
+            Goal = "Change Character",
+            Character = "Esper"
+        }
+    }
+    Event:FireServer(unpack(args))
+local Character = game:GetService("Players").LocalPlayer.character
+Event =  game:GetService("Players").LocalPlayer.Character.Communicate
+task.wait(0.5)
+
+local Character = game:GetService("Players").LocalPlayer.character
+Event =  game:GetService("Players").LocalPlayer.Character.Communicate
+spawn(function()
+    local oldTick = tick()
+    repeat
+        task.wait()
+        Character.PrimaryPart.CFrame = StarterCharacter.PrimaryPart.CFrame * CFrame.new(0, 0, 5)
+    until tick() - oldTick >= 4
+local Character = game:GetService("Players").LocalPlayer.character
+Event =  game:GetService("Players").LocalPlayer.Character.Communicate
+    local args = {
+        {
+            Goal = "Change Character",
+            Character = Moveset
+        }
+    }
+    Event:FireServer(unpack(args))
+end)
+
+task.wait(1)
+local Character = game:GetService("Players").LocalPlayer.character
+Event =  game:GetService("Players").LocalPlayer.Character.Communicate
+
+Event:FireServer(table.unpack({
+    {
+        Goal = "Console Move",
+        CrushingPull = StarterCharacter,
+        Tool = game:GetService("Players").LocalPlayer.Backpack["Crushing Pull"],
+        ToolName = "Crushing Pull"
+    }
+}))
+else
+spawn(function()
+    local oldTick = tick()
+    repeat
+        task.wait()
+        Character.PrimaryPart.CFrame = StarterCharacter.PrimaryPart.CFrame * CFrame.new(0, 0, 5)
+    until tick() - oldTick >= 4
+local Character = game:GetService("Players").LocalPlayer.character
+Event =  game:GetService("Players").LocalPlayer.Character.Communicate
+    local args = {
+        {
+            Goal = "Change Character",
+            Character = "Moveset"
+        }
+    }
+    Event:FireServer(unpack(args))
+    task.wait(1)
+local Character = game:GetService("Players").LocalPlayer.character
+Event =  game:GetService("Players").LocalPlayer.Character.Communicate
+    local args = {
+        {
+            Goal = "Change Character",
+            Character = "Esper"
+        }
+    }
+    Event:FireServer(unpack(args))
+end)
+
+task.wait(1)
+local Character = game:GetService("Players").LocalPlayer.character
+Event =  game:GetService("Players").LocalPlayer.Character.Communicate
+
+Event:FireServer(table.unpack({
+    {
+        Goal = "Console Move",
+        CrushingPull = StarterCharacter,
+        Tool = game:GetService("Players").LocalPlayer.Backpack["Crushing Pull"],
+        ToolName = "Crushing Pull"
+    }
+}))
+end
+end
+end
